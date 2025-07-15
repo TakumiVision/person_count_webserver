@@ -1,0 +1,18 @@
+# Git LFS設定ファイル
+# 大きなモデルファイル（100MB以上）をGit LFSで管理
+# ONNXモデルファイル
+*.onnx filter=lfs diff=lfs merge=lfs -text
+model/*.onnx filter=lfs diff=lfs merge=lfs -text
+# PyTorchモデルファイル
+*.pt filter=lfs diff=lfs merge=lfs -text
+*.pth filter=lfs diff=lfs merge=lfs -text
+# TensorFlow保存済みモデル
+*.pb filter=lfs diff=lfs merge=lfs -text
+*.h5 filter=lfs diff=lfs merge=lfs -text
+# その他の大きなバイナリファイル
+*.weights filter=lfs diff=lfs merge=lfs -text
+*.bin filter=lfs diff=lfs merge=lfs -text
+# その他のバイナリファイル（動画、画像）
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.avi filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
